@@ -1,4 +1,4 @@
 Name: Jonathan Nguyen
-DAte: 8/29/24 (DueDate)
-Live URL: 
-Description: This holds all of mnly projects for N220.um
+Date: 8/29/24 
+Live URL: https://lilacloaf.github.io/N220/ 
+Description: This holds all of my projects for N220
