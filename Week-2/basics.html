@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Basics</title>
+  </head>
+  <body>
+    <h1>Arithmetic</h1>
+    <ul>
+      <li id="multi">Multiplication:</li>
+      <li id="division">Division:</li>
+      <li id="remainder">Remainder/Modulus:</li>
+      <li id="exponents">Exponents:</li>
+      <li id="increment">Increment:</li>
+      <li id="decrement">Decrement:</li>
+    </ul>
+    <h2>Increment/Decrement Issue</h2>
+    <p id="before">Before:</p>
+    <p id="after">After:</p>
+    <h1>Assignment</h1>
+    <ul>
+      <li id="notSign">Not:</li>
+      <li id="addTo">Add to Value:</li>
+      <li id="subTo">Subtract from Value:</li>
+      <li id="otherT">Other from Value:</li>
+    </ul>
+    <h1>Comparison</h1>
+    <ul>
+      <li id="equal">Equal Value:</li>
+      <li id="equalVT">Equal Value and Type:</li>
+      <li id="nEqual">Not Equal Value:</li>
+      <li id="nEqualVT">Not Equal Value and Type:</li>
+      <li id="gThan">Greater Than:</li>
+      <li id="LThanOrEqual">Less Than or Equal To:</li>
+    </ul>
+
+    <script>
+      //base for elements: document.getElementById('').innerHTML +=
+      //   const myName = "Jonathan"
+      let myName = "Jonathan";
+      myName = "Not Jonathan";
+      //Necessary for math problems to work - Why???
+      //const and let both define a variable, as well as "var" not used in this class
+      //const doesn't allow the variable to change while let does
+
+      console.log(myName);
+      //Why did we do this?
+      //Arithmetic
+      document.getElementById("multi").innerHTML += "13 * 27 = " + 13 * 27;
+      document.getElementById("division").innerHTML += "6 / 2 = " + 6 / 2;
+      document.getElementById("remainder").innerHTML += "4 % 3 =" + (4 % 3);
+      // % is the sign for divinding, and giving the remainder only, dividing answer must be provided elsewhere
+      document.getElementById("exponents").innerHTML += "2 ** 3 =" + 2 ** 3;
+      let incrementNumber = 2;
+      document.getElementById("increment").innerHTML +=
+        " 2 ++ =" + incrementNumber++;
+      document.getElementById("increment").innerHTML +=
+        " <br/> 2 ++ =" + ++incrementNumber;
+      document.getElementById("decrement").innerHTML +=
+        " 2 -- =" + incrementNumber--;
+      document.getElementById("decrement").innerHTML +=
+        " <br/> 2 -- =" + --incrementNumber;
+      // Can only increment and decrement by a variable
+      // Sign on the front changes after sending a value, behind will use the value before it is changed
+      //document - Command - name - where - +=?? - type out the math problem and display it - actually solve it ( + num operator num)
+
+      //Assignment
+      document.getElementById("notSign").innerHTML += " !5 = " + !5;
+      //notSign gives the opposite boolean of the given value
+      let addToNum = 5;
+      addToNum += 2;
+      document.getElementById("addTo").innerHTML += " 5 += 2 =" + addToNum;
+      let addToString = "Ty";
+      addToString += "potatoguy";
+      document.getElementById("addTo").innerHTML += "Ty + potatoguy = " addToString;
+      //string will append values to the other, num will add them together
+
+      // subToNum is the same as addTo, however there is no subtostring
+
+      //Comparison
+      document.getElementById("equal").innerHTML += " 3 == '3' = " + (3 == '3')
+      // 3 equal signs checks for 100% equal, 2 equal signs checks if they are almost the same (3 and string 3 are the same vs different)
+      document.getElementById("nEqual").innerHTML += "3 != '3' ="
+    </script>
+  </body>
+</html>

@@ -1,4 +1,4 @@
 Name: Jonathan Nguyen
-Date: 9/3/24
+Date: 9/10/24
 Live URL: 
-Description: Homework assignment #1 - Create a test html file
+Description: Link an HTML file to a Javascript file, and solve the problems in the HTML file using basic Javascript
