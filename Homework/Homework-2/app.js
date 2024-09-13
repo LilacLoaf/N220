@@ -10,6 +10,7 @@ let jacket = "70";
 let first = "65.87";
 document.getElementById("funds").innerHTML += " " + !(first - jacket);
 // wasn't there supposed to be a video
+
 document.getElementById("profPizza").innerHTML +=
   "4 pizzas times 8 slices =" + 4 * 8;
 document.getElementById("fed").innerHTML +=
@@ -17,6 +18,14 @@ document.getElementById("fed").innerHTML +=
 document.getElementById("prof").innerHTML +=
   "Pizza for professor: " + (32 % 2.5);
 //stack overflow my beloved
+
+//correct answer
+//define variables Total Pizzas, SLices per pizza, slices students can eat
+// define variable leftover pizza = total pizzas * slices % slices that are eaten
+//const total=4;
+//const slicesper=8;
+//const sliceseaten=2.5
+
 let adult = "12";
 let child = "6";
 let drink = "1.5";
