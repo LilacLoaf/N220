@@ -1,0 +1,4 @@
+Name: Jonathan Nguyen
+Date: 9/19/24
+Live URL: https://lilacloaf.github.io/N220/ 
+Description: Homework 3 for N220 - Functions
