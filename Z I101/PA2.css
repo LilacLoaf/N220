@@ -1,0 +1,57 @@
+@charset "utf-8";
+/* CSS Document */
+#orang {
+  background-color: orange;
+}
+#highlight {
+  background-color: indianred;
+}
+.align {
+  text-align: center;
+}
+#happening {
+  font-size: 500%;
+}
+#happening2 {
+  font-size: 300%;
+}
+#underline {
+  text-decoration: underline;
+}
+#blue {
+  background-color: aqua;
+  border-bottom: solid 0.5px grey;
+}
+
+#pic2 {
+  align-content: center;
+  width: 100%;
+  height: 100%;
+}
+#iframe {
+  align-content: center;
+  width: 100%;
+  height: 100%;
+}
+#thick {
+  border: solid 2px black;
+}
+#green {
+  background-color: lightgreen;
+}
+#white {
+  background-color: whitesmoke;
+}
+#red {
+  background-color: lightpink;
+}
+#border {
+  border-top: solid;
+}
+#botborder {
+  border-bottom: solid;
+}
+#footer {
+  text-decoration: underline;
+  text-align: center;
+}

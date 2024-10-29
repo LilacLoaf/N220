@@ -1,9 +1,19 @@
-let quizzes = [66, 77, 88, 99];
-let discussions = [10, 15, 15, 12, 14];
-let assignments = [67, 78, 89, 90];
-let midterms = [82, 72];
-let exams = [98, 75, 84, midterms];
-let participation = 91;
-let courseGrade = [quizzes, exams, discussions, assignments, participation];
+/*
+1. Create variable tracking currentCount
 
-document.getElementById("text").innerHTML += courseGrade.exams.midterms[1];
+2. Create function addCount to add to the currentCount then update the "counter" p tag to show the currentCount
+
+*/
+
+let currentCount = 0;
+
+function showCurrentCount() {
+  document.querySelector("#counter").innerHTML = currentCount;
+}
+
+showCurrentCount();
+
+function addCount() {
+  currentCount++;
+  showCurrentCount();
+}

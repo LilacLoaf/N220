@@ -1,37 +1,48 @@
-//1. create a classroom object with properties for
-//list of students
-//class name
-//function to show students
-//max students
+/*
 
-//2. show students function should do
-//clear current students shown in p tag
-//loop through list of students and add them to p tag (br after each)
+1. Create a classroom object with properties / methods for:
+    - the list of students
+    - class name
+    - show students function
+    - max students
 
-//3. create function for adding new students
-//check if theres a seat, if not then console "no seats available"
-//if there are, then add students name to object
-//, then show students
+2. The show students function / method for your classroom object should:
+    - clear current students shown in p tag
+    - loop through list of students and add them to p tag (use <br /> after each student)
+
+3. Create a function for adding the new student (make sure it matches the button onclick function call). 
+
+This function should check if there is a seat available for the student. 
+
+If there is not then console.log("No seats available"). 
+
+If there are then add the student's name to the list of students on the classroom object then run the show students method.
+
+
+ */
 
 const classroom = {
   students: [],
-  //this property will put this object into an array
-  name: "Class",
+  name: "Ty's Class",
   showStudents() {
     document.getElementById("students").innerHTML = "";
 
-    this.students.forEach(function (studentName) {
-      document.getElementById("students").innerHTML += studentName + "<br/>";
-    });
+    // this.students.forEach(function (studentName) {
+    //   document.getElementById("students").innerHTML += studentName + "<br />";
+    // });
+    for (let i = 0; i < this.students.length; i++) {
+      const studentName = this.students[i];
+      document.getElementById("students").innerHTML += studentName + "<br />";
+    }
   },
-  maxStudents: 2,
+  maxStudents: 6,
 };
 
 function addNewStudent() {
   const currentStudents = classroom.students.length;
 
   if (currentStudents >= classroom.maxStudents) {
-    console.log("no seats available");
+    console.log("No seats available");
   } else {
     classroom.students.push(document.getElementById("studentName").value);
     classroom.showStudents();

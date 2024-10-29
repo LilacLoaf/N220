@@ -1,0 +1,30 @@
+body {
+  background-color: lightgrey;
+}
+#header {
+  background-color: lightcoral;
+  border-style: solid;
+  margin: 8px;
+  padding: 5px;
+}
+#navBox {
+  background-color: gray;
+  border-style: solid;
+}
+.navButton {
+  text-align: center;
+  border-style: solid;
+  margin-top: 7px;
+  background-color: lightcoral;
+}
+#footer {
+  display: block;
+  text-align: center;
+  background-color: lightcoral;
+  border: solid;
+  /*google got me, gotta figure out what these mean though*/
+  display: block;
+  position: absolute;
+  bottom: 0;
+  text-decoration: underline;
+}
