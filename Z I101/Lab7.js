@@ -19,7 +19,7 @@ var bikesTotal = bikes1 + bikes2 + bikes3 + bikes4;
 //supply of bikes
 var bikesWanted = 21;
 var bikesNeeded = bikesWanted - bikesTotal;
-var bikesNeededTomorrow = bikesTotal - bikesWanted;
+var bikesNeededTomorrow = "";
 
 document.write("<h2>" + subtitle + "</h2>");
 document.write(tableHead);
@@ -37,6 +37,7 @@ document.write(
 );
 
 bikesWanted = 8;
+bikesNeededTomorrow = bikesTotal - bikesWanted;
 //this doesnt change the variable for some reason
 document.write(
   "Number of extra bikes that we will have tomorrow: " + bikesNeededTomorrow

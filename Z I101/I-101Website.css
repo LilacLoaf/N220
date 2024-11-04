@@ -1,0 +1,37 @@
+.header {
+  border-style: solid;
+  margin: 8px;
+  padding: 5px;
+}
+#navBox {
+  background-color: gray;
+  border-style: solid;
+}
+.navButton {
+  text-align: center;
+  border-style: solid;
+  margin-top: 7px;
+}
+#footer {
+  text-align: center;
+  border: solid;
+  text-decoration: underline;
+}
+.homeImage {
+  width: 100%;
+  border: solid;
+}
+.bgCoral {
+  background-color: lightblue;
+}
+.bgWhite {
+  background-color: white;
+}
+.borderSolid {
+  border-style: solid;
+  border-color: black;
+}
+/*the border is there but it isn't changing colors D:*/
+.homeH2 {
+  border-bottom: solid;
+}

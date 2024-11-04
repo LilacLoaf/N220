@@ -39,3 +39,6 @@ function changeUserColor(userColorIndex) {}
 function openColorChanger(userColorIndex) {
   document.getElementById(`user-color-${userColorIndex}`);
 }
+for (var i = 0; i <= 10; i += 2) {
+  console.log(i);
+}
