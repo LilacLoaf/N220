@@ -1,0 +1,51 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.header {
+  border-style: solid;
+  margin: 8px;
+  padding: 5px;
+  text-align: center;
+}
+
+#navBox {
+  background-color: gray;
+  border-style: solid;
+}
+.navButton {
+  text-align: center;
+  border-style: solid;
+  margin-top: 7px;
+}
+.bgBlue {
+  background-color: lightblue;
+}
+
+.header2 {
+  text-align: center;
+}
+
+.imgcenter {
+  align-content: center;
+}
+
+.centertext {
+  text-align: center;
+}
+
+.img {
+  background-color: lightgray;
+}
+
+#footer {
+  text-align: center;
+  border-style: solid;
+  margin: 8px;
+  padding: 5px;
+  text-decoration: underline;
+}
+
+.borderSolid {
+  border-style: solid;
+  border-color: black;
+}

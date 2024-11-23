@@ -10,6 +10,7 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link href="I-101Website.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
@@ -51,7 +52,38 @@
     </div>
     <br />
     <!-- Header Above -->
-    oijgoirj
+    <div class="container">
+      <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8">
+          <h3 class="bgBlue centerDiv borderSolid">Age Ranges</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8">
+          <canvas class="chart borderSolid" id="genderChart"></canvas>
+        </div>
+      </div>
+      <br />
+      <div class="row">
+        <div class="col-1"></div>
+        <div class="col-10 borderSolid">
+          <!-- More detailed description of the chart's contents
+           it's kinda massive also i ono -->
+          <h2 class="homeH2">Description of the data</h2>
+          <p class="centerDiv margin">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit , sed do
+            eiusmod tempor incididunt ut labore et dolore ma gna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercita tion ullamco laboris nisi ut
+            aliquip ex ea commodo conseq uat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepte ur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id es t laborum.
+          </p>
+        </div>
+      </div>
+    </div>
     <!-- Footer Below -->
 
     <br />
@@ -62,5 +94,7 @@
         </div>
       </div>
     </div>
+
+    <script src="GenderGraph.js"></script>
   </body>
 </html>

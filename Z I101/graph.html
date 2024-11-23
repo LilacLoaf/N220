@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Untitled Document</title>
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Single Bar Graph for Age Ranges</title>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <style>
+          canvas {
+            max-width: 150px;
+            min-height: 3000px;
+          }
+        </style>
+      </head>
+      <body>
+        <canvas id="myChart"></canvas>
+
+        <script>
+          const ctx = document.getElementById("myChart").getContext("2d");
+          const myChart = new Chart(ctx, {
+            type: "bar",
+            data: {
+              labels: ["16-24", "25-29", "30-39", "40-49"],
+              datasets: [
+                {
+                  label: "Amount of Students Employeed",
+                  data: [39.9, 47.0, 45.4, 43.6],
+                  backgroundColor: "rgba(75, 192, 192, 0.6)",
+                  borderColor: "rgba(75, 192, 192, 1)",
+                  borderWidth: 1,
+                },
+              ],
+            },
+            options: {
+              scales: {
+                x: {
+                  title: {
+                    display: true,
+                    text: "Age Ranges",
+                  },
+                },
+                y: {
+                  beginAtZero: true,
+                  min: 35,
+                  max: 50,
+                  title: {
+                    display: true,
+                    text: "% of Students Working",
+                  },
+                },
+              },
+            },
+          });
+        </script>
+      </body>
+    </html>
+
+    <body></body>
+  </head>
+</html>

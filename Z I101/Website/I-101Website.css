@@ -29,7 +29,7 @@
   list-style-type: none;
 }
 .bgBlue {
-  background-color: lightcoral;
+  background-color: lightblue;
 }
 .bgWhite {
   background-color: white;
@@ -100,8 +100,4 @@
 .chart {
   min-height: 350px;
   min-width: 100%;
-}
-a {
-  text-decoration: none;
-  color: black;
 }
