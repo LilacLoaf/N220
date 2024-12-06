@@ -1,5 +1,5 @@
 Final Project
-https://lilacloaf.github.io/N220/Final/Readme.txt
+    https://lilacloaf.github.io/N220/Final/
 Features:
     Login Form: 
     Reference Username and Password inputs from HTML document - take inputs and push them into an object for the account

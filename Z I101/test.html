@@ -1,82 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <style>
-      .dropbtn {
-        background-color: #4caf50;
-        color: white;
-        padding: 16px;
-        font-size: 16px;
-        border: none;
-        cursor: pointer;
-      }
-
-      .dropdown {
-        position: relative;
-        display: inline-block;
-      }
-
-      .dropdown-content {
-        display: none;
-        position: absolute;
-        right: 0;
-        background-color: #f9f9f9;
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-        z-index: 1;
-      }
-
-      .dropdown-content a {
-        color: black;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-      }
-
-      .dropdown-content a:hover {
-        background-color: #f1f1f1;
-      }
-
-      .dropdown:hover .dropdown-content {
-        display: block;
-      }
-
-      .dropdown:hover .dropbtn {
-        background-color: #3e8e41;
-      }
-    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hide and Show Canvases</title>
   </head>
   <body>
-    <h2>Aligned Dropdown Content</h2>
-    <p>
-      Determine whether the dropdown content should go from left to right or
-      right to left with the left and right properties.
-    </p>
+    <!-- Three Canvases -->
+    <canvas
+      id="canvas1"
+      width="400"
+      height="400"
+      style="border: 1px solid #000000"
+    ></canvas>
+    <canvas
+      id="canvas2"
+      width="400"
+      height="400"
+      style="border: 1px solid #000000"
+    ></canvas>
+    <canvas
+      id="canvas3"
+      width="400"
+      height="400"
+      style="border: 1px solid #000000"
+    ></canvas>
 
-    <div class="dropdown" style="float: left">
-      <button class="dropbtn">Left</button>
-      <div class="dropdown-content" style="left: 0">
-        <a href="#">Link 1</a>
-        <a href="#">Link 2</a>
-        <a href="#">Link 3</a>
-      </div>
-    </div>
+    <br />
 
-    <div class="dropdown" style="float: right">
-      <button class="dropbtn">Right</button>
-      <div class="dropdown-content">
-        <a href="#">Link 1</a>
-        <a href="#">Link 2</a>
-        <a href="#">Link 3</a>
-      </div>
-    </div>
+    <!-- Buttons to toggle visibility -->
+    <button onclick="toggleCanvas('canvas1')">Toggle Canvas 1</button>
+    <button onclick="toggleCanvas('canvas2')">Toggle Canvas 2</button>
+    <button onclick="toggleCanvas('canvas3')">Toggle Canvas 3</button>
 
-    <div class="dropdown">
-      <button class="dropbtn">Dropdown</button>
-      <div class="dropdown-content">
-        <button onclick>hi</button>
-        <p>hii</p>
-      </div>
-    </div>
+    <script>
+      // Function to toggle the visibility of a specific canvas
+      function toggleCanvas(canvasId) {
+        let canvas = document.getElementById(canvasId);
+
+        // Check the current display style and toggle between 'none' and 'block'
+        if (canvas.style.display === "none") {
+          canvas.style.display = "block"; // Show the canvas
+        } else {
+          canvas.style.display = "none"; // Hide the canvas
+        }
+      }
+    </script>
   </body>
 </html>

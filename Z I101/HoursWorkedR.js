@@ -1,5 +1,5 @@
-const ctx = document.getElementById("genderChart").getContext("2d");
-const myChart = new Chart(ctx, {
+const ctx2 = document.getElementById("hourChartR").getContext("2d");
+const HourChartR = new Chart(ctx2, {
   type: "bar",
   data: {
     labels: ["<10 Hrs", "10-19 Hrs", "20-34 Hrs", ">35 Hrs"],

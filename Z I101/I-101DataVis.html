@@ -10,6 +10,7 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link href="I-101Website.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
@@ -63,36 +64,79 @@
       <div class="row">
         <div class="col-1"></div>
         <div class="col-4">
-          <h3 class="borderSolid bgBlue centerDiv">Name of Graph</h3>
+          <h3 class="borderSolid bgBlue centerDiv" id="chartL">Hours Worked</h3>
         </div>
         <div class="col-2"></div>
         <div class="col-4">
-          <h3 class="borderSolid bgBlue centerDiv">Name of Graph</h3>
+          <h3 class="borderSolid bgBlue centerDiv" id="chartR">Hours Worked</h3>
         </div>
       </div>
       <div class="row">
         <div class="col-6">
-          <img class="Image" src="Placeholder.png" alt="Placeholder" />
+          <canvas class="borderSolid" id="hourChartL"></canvas>
+          <canvas class="borderSolid" id="raceChartL"></canvas>
+          <canvas class="borderSolid" id="ageChartL"></canvas>
         </div>
         <div class="col-6">
-          <img class="Image" src="Placeholder.png" alt="Placeholder" />
+          <canvas class="borderSolid" id="hourChartR"></canvas>
+          <canvas class="borderSolid" id="raceChartR"></canvas>
+          <canvas class="borderSolid" id="ageChartR"></canvas>
         </div>
       </div>
       <br />
-
+      <div class="row">
+        <div class="col-6">
+          <div class="row">
+            <div class="col-4">
+              <h3 class="bgBlue borderSolid centerDiv selecto" id="hours">
+                Hours Worked
+              </h3>
+            </div>
+            <div class="col-4">
+              <h3 class="bgBlue borderSolid centerDiv selecto" id="agerange">
+                Age Range
+              </h3>
+            </div>
+            <div class="col-4">
+              <h3 class="bgBlue borderSolid centerDiv selecto" id="ethnicity">
+                Ethnicity
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="row">
+            <div class="col-4">
+              <h3 class="bgBlue borderSolid centerDiv selecto" id="hoursr">
+                Hours Worked
+              </h3>
+            </div>
+            <div class="col-4">
+              <h3 class="bgBlue borderSolid centerDiv selecto" id="ageranger">
+                Age Range
+              </h3>
+            </div>
+            <div class="col-4">
+              <h3 class="bgBlue borderSolid centerDiv selecto" id="ethnicityr">
+                Ethnicity
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
       <!--Graph Selector-->
 
       <div class="row">
         <div class="col-3">
           <div class="dropdown">
-            <button class="dropButton">Gender ↓</button>
+            <button class="dropButton">Hours Worked ↓</button>
             <div class="dropList">
               <ul class="bullet">
-                <li class="dropLabel centerDiv">16-24</li>
-                <li class="dropLabel centerDiv">25-29</li>
-                <li class="dropLabel centerDiv">30-39</li>
-                <li class="dropLabel centerDiv">40-49</li>
-                <li class="dropLabel centerDiv">50-64</li>
+                <li class="dropLabel centerDiv" id="zero">&lt;10</li>
+                <li class="dropLabel centerDiv" id="ten">10-19</li>
+                <li class="dropLabel centerDiv" id="twenty">20-34</li>
+                <li class="dropLabel centerDiv" id="thirty">&gt;35</li>
               </ul>
             </div>
           </div>
@@ -100,14 +144,13 @@
         <div class="col-6"></div>
         <div class="col-3">
           <div class="dropdown">
-            <button class="dropButton">Gender ↓</button>
+            <button class="dropButton">Hours Worked ↓</button>
             <div class="dropListR">
               <ul class="bullet">
-                <li class="dropLabel centerDiv">> 16-25</li>
-                <li class="dropLabel centerDiv">16-25</li>
-                <li class="dropLabel centerDiv">16-25</li>
-                <li class="dropLabel centerDiv">16-25</li>
-                <li class="dropLabel centerDiv">16-25</li>
+                <li class="dropLabel centerDiv" id="zeror">&lt;10</li>
+                <li class="dropLabel centerDiv" id="tenr">10-19</li>
+                <li class="dropLabel centerDiv" id="twentyr">20-34</li>
+                <li class="dropLabel centerDiv" id="thirtyr">&gt;35</li>
               </ul>
             </div>
           </div>
@@ -117,11 +160,11 @@
             <button class="dropButton">Age ↓</button>
             <div class="dropList">
               <ul class="bullet">
-                <li class="dropLabel centerDiv">> 16-25</li>
-                <li class="dropLabel centerDiv">16-25</li>
-                <li class="dropLabel centerDiv">16-25</li>
-                <li class="dropLabel centerDiv">16-25</li>
-                <li class="dropLabel centerDiv">16-25</li>
+                <li class="dropLabel centerDiv" id="age1">16-24</li>
+                <li class="dropLabel centerDiv" id="age2">25-29</li>
+                <li class="dropLabel centerDiv" id="age3">30-39</li>
+                <li class="dropLabel centerDiv" id="age4">40-49</li>
+                <li class="dropLabel centerDiv" id="age5">50-64</li>
               </ul>
             </div>
           </div>
@@ -132,11 +175,11 @@
             <button class="dropButton">Age ↓</button>
             <div class="dropListR">
               <ul class="bullet">
-                <li class="dropLabel centerDiv">> 16-25</li>
-                <li class="dropLabel centerDiv">16-25</li>
-                <li class="dropLabel centerDiv">16-25</li>
-                <li class="dropLabel centerDiv">16-25</li>
-                <li class="dropLabel centerDiv">16-25</li>
+                <li class="dropLabel centerDiv" id="ager1">16-24</li>
+                <li class="dropLabel centerDiv" id="ager2">25-29</li>
+                <li class="dropLabel centerDiv" id="ager3">30-39</li>
+                <li class="dropLabel centerDiv" id="ager4">40-49</li>
+                <li class="dropLabel centerDiv" id="ager5">50-64</li>
               </ul>
             </div>
           </div>
@@ -146,11 +189,10 @@
             <button class="dropButton">Race ↓</button>
             <div class="dropList">
               <ul class="bullet">
-                <li class="dropLabel centerDiv">> 16-25</li>
-                <li class="dropLabel centerDiv">16-25</li>
-                <li class="dropLabel centerDiv">16-25</li>
-                <li class="dropLabel centerDiv">16-25</li>
-                <li class="dropLabel centerDiv">16-25</li>
+                <li class="dropLabel centerDiv" id="white">White</li>
+                <li class="dropLabel centerDiv" id="black">Black</li>
+                <li class="dropLabel centerDiv" id="hispanic">Hispanic</li>
+                <li class="dropLabel centerDiv" id="asian">Asian</li>
               </ul>
             </div>
           </div>
@@ -161,14 +203,23 @@
             <button class="dropButton">Race ↓</button>
             <div class="dropListR">
               <ul class="bullet">
-                <li class="dropLabel centerDiv">> 16-25</li>
-                <li class="dropLabel centerDiv">16-25</li>
-                <li class="dropLabel centerDiv">16-25</li>
-                <li class="dropLabel centerDiv">16-25</li>
-                <li class="dropLabel centerDiv">16-25</li>
+                <li class="dropLabel centerDiv" id="whiter">White</li>
+                <li class="dropLabel centerDiv" id="blackr">Black</li>
+                <li class="dropLabel centerDiv" id="hispanicr">Hispanic</li>
+                <li class="dropLabel centerDiv" id="asianr">Asian</li>
               </ul>
             </div>
           </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-9">
+          <p id="clearL">Clear Filters</p>
+          <p id="filters"></p>
+        </div>
+        <div class="col-3">
+          <p id="clearR">Clear Filters</p>
+          <p id="filtersr"></p>
         </div>
       </div>
       <!-- footer below -->
@@ -181,6 +232,13 @@
         </div>
       </div>
     </div>
+    <!--this is so awful !!!!-->
+    <script src="HoursWorked.js"></script>
+    <script src="HoursWorkedR.js"></script>
+    <script src="RaceGraph.js"></script>
+    <script src="RaceGraphR.js"></script>
     <script src="ageGraph.js"></script>
+    <script src="ageGraphR.js"></script>
+    <script src="website.js"></script>
   </body>
 </html>

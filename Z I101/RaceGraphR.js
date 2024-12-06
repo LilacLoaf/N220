@@ -1,5 +1,5 @@
-const ctx4 = document.getElementById("raceChartR").getContext("2d");
-const RaceChartR = new Chart(ctx4, {
+const ctx3 = document.getElementById("raceChartL").getContext("2d");
+const RaceChartL = new Chart(ctx3, {
   type: "bar",
   data: {
     labels: ["White", "Black", "Hispanic", "Asian"],
