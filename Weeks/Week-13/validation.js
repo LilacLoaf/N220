@@ -9,7 +9,7 @@ function validatePassword() {
     const currentCharacter = passwordRef.value[i];
 
     // Is there at least 1 number
-    if (isNaN(currentCharacter) === true) {
+    if (isNaN(currentCharacter) === false) {
       containsNumber = true;
     }
 

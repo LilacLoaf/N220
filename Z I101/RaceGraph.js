@@ -5,7 +5,7 @@ const RaceChartR = new Chart(ctx4, {
     labels: ["White", "Black", "Hispanic", "Asian"],
     datasets: [
       {
-        label: "Population Distribution",
+        label: "",
         data: [44.1, 36.6, 39, 31.1],
         backgroundColor: [
           "rgba(75, 192, 192, 0.6)",
@@ -24,6 +24,14 @@ const RaceChartR = new Chart(ctx4, {
     ],
   },
   options: {
+    plugins: {
+      title: {
+        display: false,
+      },
+      legend: {
+        display: false,
+      },
+    },
     scales: {
       x: {
         title: {

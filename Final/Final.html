@@ -6,13 +6,25 @@
     <title>Document</title>
   </head>
   <body>
-    <label for="username">Username</label>
-    <input type="text" name="username" id="username" />
-    <br />
+    <div id="screenOne">
+      <h1>Account Sign-in</h1>
+      <label for="username">Username</label>
+      <input type="text" name="username" id="username" />
+      <br />
 
-    <label for="password">Password</label>
-    <input type="password" name="password" id="password" />
+      <label for="100">Password</label>
+      <input type="text" name="password" id="password" />
 
+      <button type="button" id="account" onclick="checkPassword()">
+        Check Account
+      </button>
+    </div>
+    <div id="screenTwo">
+      <h1>Account Dashboard</h1>
+      <button type="button" id="newtask" onclick="newTask()">New Task</button>
+      <button type="button" id="logout" onclick="Logout()">Logout</button>
+      <div id="taskDiv"></div>
+    </div>
     <script src="Final.js"></script>
   </body>
 </html>

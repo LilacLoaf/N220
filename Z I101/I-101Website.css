@@ -4,7 +4,7 @@
   padding: 5px;
 }
 #navBox {
-  background-color: gray;
+  background-color: lightgrey;
   border-style: solid;
 }
 .navButton {
@@ -95,7 +95,7 @@
   width: 100%;
 }
 .dropLabel:hover {
-  background-color: grey;
+  background-color: lightgrey;
 }
 .chart {
   min-height: 350px;

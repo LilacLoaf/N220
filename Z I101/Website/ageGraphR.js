@@ -1,5 +1,5 @@
-const ctx5 = document.getElementById("ageChartL").getContext("2d");
-const ageChartL = new Chart(ctx5, {
+const ctx6 = document.getElementById("ageChartR").getContext("2d");
+const ageChartR = new Chart(ctx6, {
   type: "bar",
   data: {
     labels: ["16-24", "25-29", "30-39", "40-49"],

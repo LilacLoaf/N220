@@ -1,11 +1,11 @@
-const ctx = document.getElementById("raceChart").getContext("2d");
-const myChart = new Chart(ctx, {
+const ctx4 = document.getElementById("raceChartR").getContext("2d");
+const RaceChartR = new Chart(ctx4, {
   type: "bar",
   data: {
     labels: ["White", "Black", "Hispanic", "Asian"],
     datasets: [
       {
-        label: "Population Distribution",
+        label: "",
         data: [44.1, 36.6, 39, 31.1],
         backgroundColor: [
           "rgba(75, 192, 192, 0.6)",
@@ -24,6 +24,14 @@ const myChart = new Chart(ctx, {
     ],
   },
   options: {
+    plugins: {
+      title: {
+        display: false,
+      },
+      legend: {
+        display: false,
+      },
+    },
     scales: {
       x: {
         title: {

@@ -49,3 +49,10 @@
   border-style: solid;
   border-color: black;
 }
+a {
+  text-decoration: none;
+  color: black;
+}
+.centerDiv {
+  text-align: center;
+}
